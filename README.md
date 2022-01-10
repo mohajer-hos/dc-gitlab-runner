@@ -12,29 +12,33 @@
 ```sh
 git clone https://github.com/ariadata/dc-gitlab-runner.git && cd dc-gitlab-runner && rm -rf .git
 ```
----
-#### 2- Login to `gitlab-runner` container by :
+#### 2- Run docker-compose file by using :
+```sh
+docker-compose up -d
+```
+#### 3- Login to `gitlab-runner` container by :
 ```sh
 docker exec -it dc-gitlab-runner bash
 ```
-#### 3- Register your runner by :
+#### 4- Register your runner by :
 ```sh
-dc-gitlab-runner register
+gitlab-runner register
 ```
 > Fill the requested information
 > 
-> *Note sample* : for tags you can use `shared,docker,linux,ubuntu` (if is shared runner)
+> *Note sample* : for tags you can use `docker,linux,ubuntu` (for shared add `shared` too!)
 > 
-> *Note sample* : enter `docker` for runner type
+> *Note sample* : for executor enter `docker`
 > 
-> *Note sample* : enter `ubuntu:latest` for basic image
+> *Note sample* : for default docker image enter `ubuntu:latest`
 
-#### 4- restart your instance by :
+#### 5- restart your instance by :
 ```sh
-dc-gitlab-runner restart
+gitlab-runner restart
 ```
-#### 5- exit from container by `exit` command.
-#### 6- (optional) Remove unused docker images by runnig this command anytime in your dockerhost:
+#### 6- exit from container by `exit` command.
+
+#### 7- (optional) Remove unused docker images by runnig this command anytime in your dockerhost:
 ```sh
 docker system prune -af
 ```
@@ -43,10 +47,10 @@ Or you can set cron for do this for example once per day at midnight by :
 crontab -l | { cat; echo "0 0 * * * docker system prune -af >/dev/null 2>&1"; } | crontab -
 sudo systemctl restart cron
 ```
-#### 7- (optional) You can edit config file of your instance :
+#### 8- (optional) You can edit config file of your instance :
 ```sh
-nano ~/dc-gitlab-runner/config/config.toml
-docker exec -it gitlab-runner dc-gitlab-runner restart
+sudo nano config/config.toml
+docker exec -it gitlab-runner gitlab-runner restart
 ```
 
 Done!
