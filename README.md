@@ -18,7 +18,7 @@ docker-compose up -d
 ```
 #### 3- Login to `gitlab-runner` container by :
 ```sh
-docker exec -it dc-gitlab-runner bash
+docker exec -it gitlab-runner bash
 ```
 #### 4- Register your runner by :
 ```sh
