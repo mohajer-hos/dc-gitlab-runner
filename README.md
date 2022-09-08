@@ -5,7 +5,7 @@
 ![](https://img.shields.io/github/watchers/ariadata/dc-gitlab-runner.svg)
 ![](https://img.shields.io/github/forks/ariadata/dc-gitlab-runner.svg)
 
-> This needs `DockerHost` : [install from here](https://github.com/ariadata/ubuntu-sh) .
+### This needs : [dockerhost](https://github.com/ariadata/dockerhost-sh)
 
 ---
 #### 1- Clone these repository to your system :
