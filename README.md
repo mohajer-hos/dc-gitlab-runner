@@ -1,9 +1,4 @@
 ## Run a gitlab-runner instance with docker-compose
-[![Build Status](https://files.ariadata.co/file/ariadata_logo.png)](https://ariadata.co)
-
-![](https://img.shields.io/github/stars/ariadata/dc-gitlab-runner.svg)
-![](https://img.shields.io/github/watchers/ariadata/dc-gitlab-runner.svg)
-![](https://img.shields.io/github/forks/ariadata/dc-gitlab-runner.svg)
 
 ### This needs : [dockerhost](https://github.com/ariadata/dockerhost-sh)
 
